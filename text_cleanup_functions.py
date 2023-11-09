@@ -10,9 +10,9 @@ def split_words_by_space(text):
     return text
 
 
-# replace non-word characters with space - regex
+# replace non-word characters (includind numbers) with space - regex
 def remove_non_word_chars(text):
-    cleaned_text = re.sub(r'[^A-Za-z0-9\s]', ' ', text)
+    cleaned_text = re.sub(r'[^A-Za-z\s]', ' ', text)
     return cleaned_text
 
 
