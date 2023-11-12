@@ -11,8 +11,9 @@ def split_words_by_space(text):
 
 
 # replace non-word characters (includind numbers) with space - regex
+# keep apostrophes as these are kept in most NLP models
 def remove_non_word_chars(text):
-    cleaned_text = re.sub(r'[^A-Za-z\s]', ' ', text)
+    cleaned_text = re.sub(r"[^A-Za-z\s']", ' ', text)
     return cleaned_text
 
 
